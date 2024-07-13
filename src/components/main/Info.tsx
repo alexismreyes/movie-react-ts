@@ -22,7 +22,7 @@ const Info = () => {
           <FaRegPlayCircle size={25} color={"red"} />
         </section>
         <section className="title-info">
-          { state.name }
+          { state.name } - {state.url}
         </section>
         <section className="details-info">
           <section className="list">
