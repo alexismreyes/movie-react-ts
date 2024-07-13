@@ -4,13 +4,13 @@ import Detail from "./components/main/detail";
 import { AppProvider } from "./context/Context";
 
 const App = () => {
-  const url = import.meta.env.VITE_BASE_URL;
-  console.log("Base URL->", url);
+  
+  const basename = import.meta.env.VITE_BASE_URL;
 
   return (
     <>
       <AppProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/details/:id" element={<Detail />}></Route>

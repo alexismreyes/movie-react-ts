@@ -8,7 +8,7 @@ const Caroussel = (): JSX.Element =>{
     const [data,setData] =  useState<Movie[]>([]);
 
     const getData = async(): Promise<void> => {
-        const url = import.meta.env.VITE_BASE_URL;
+        const url = import.meta.env.VITE_API_URL;
         const items = await fetch(url);
         const response = await items.json();
 
